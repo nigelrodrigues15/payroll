@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :employees
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # root to: 'static_pages#root'
@@ -7,8 +6,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
-    resources :watchlists, only: [:create, :destroy, :index]
-    resources :companies, only: [:index, :show, :update]
+    resources :employees, only: [:create, :destroy, :index, :show, :update]
+    resources :payslips, only: [:create, :destroy, :index, :show, :update]
   end
 
 end
