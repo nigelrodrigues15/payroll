@@ -27,25 +27,25 @@ ActiveRecord::Schema.define(version: 2019_11_10_125136) do
 
   create_table "payslips", force: :cascade do |t|
     t.integer "employee_id", null: false
-    t.integer "payment_date", null: false
-    t.integer "pay_end_date", null: false
-    t.float "regular_hours", null: false
-    t.float "overtime_hours", null: false
-    t.float "holiday_pay", null: false
-    t.float "performance_incentive", null: false
-    t.float "vacation_pay", null: false
-    t.float "employer_health_benefit_contributions", null: false
-    t.float "employee_health_benefit_contributions", null: false
-    t.float "ei", null: false
-    t.float "cpp", null: false
-    t.float "total_tax_deduction", null: false
-    t.float "total_earnings", null: false
-    t.float "total_deductions", null: false
-    t.float "y2d_net_pay", null: false
-    t.float "pay_check", null: false
+    t.integer "payment_date"
+    t.integer "pay_end_date"
+    t.float "regular_hours"
+    t.float "overtime_hours"
+    t.float "holiday_pay"
+    t.float "performance_incentive"
+    t.float "vacation_pay"
+    t.float "employer_health_benefit_contributions"
+    t.float "employee_health_benefit_contributions"
+    t.float "ei"
+    t.float "cpp"
+    t.float "total_tax_deduction"
+    t.float "total_earnings"
+    t.float "total_deductions"
+    t.float "y2d_net_pay"
+    t.float "pay_check"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["employee_id"], name: "index_payslips_on_employee_id", unique: true
+    t.index ["employee_id"], name: "index_payslips_on_employee_id"
   end
 
 end
