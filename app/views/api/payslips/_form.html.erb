@@ -1,0 +1,32 @@
+<%= form_with(model: payslip, local: true) do |form| %>
+  <% if payslip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payslip.errors.count, "error") %> prohibited this payslip from being saved:</h2>
+
+      <ul>
+        <% payslip.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.number_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :regular_hours %>
+    <%= form.number_field :regular_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :overtime_hours %>
+    <%= form.number_field :overtime_hours %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
