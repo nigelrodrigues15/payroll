@@ -1,16 +1,19 @@
 class Api::EmployeesController < ApplicationController
-  before_action :set_employee, only: [:show, :edit, :update, :destroy]
+  # before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   # GET /employees
   # GET /employees.json
   def index
     @employees = Employee.all
     # format.html { render :index }
+    render 'api/employees/index'
   end
 
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @employee = Employee.find(params[:id])
+    render 'api/employees/show'
   end
 
   # GET /employees/new
