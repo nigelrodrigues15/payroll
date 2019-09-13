@@ -1,1 +1,0 @@
-json.extract! @employee, :id, :name, :wage, :province, :start_date, :end_date
