@@ -11,7 +11,7 @@ const landing = () => {
             <div className="newData">
                 <Link className="Link" to="/dashboard">
                     <Button id='UIbutton' variant="outlined" color="default" startIcon={<AddIcon />}>
-                        Create New Data
+                        <p> Create New Data</p>
                     </Button>
                 </Link>
             </div>
@@ -19,7 +19,7 @@ const landing = () => {
             <div className="oldData">
                 <Link className="Link" to="/dashboard">
                     <Button id='UIbutton' variant="outlined" color="default" startIcon={<CloudUploadIcon />}>
-                        Upload Existing Data
+                        <p> Upload Existing Data </p>
                     </Button>
                 </Link>
             </div>
