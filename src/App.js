@@ -5,8 +5,6 @@ import Dashboard from "./components/dashboard/dashboard";
 import { connect } from 'react-redux';
 import './App.css';
 
-import { simpleAction } from './actions/simpleAction';
-
 class App extends Component {
  render() {
   return (
