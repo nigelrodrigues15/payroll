@@ -27,21 +27,28 @@ code {
   height: 100vh;
   position: absolute;
   background-image: url("https://images.squarespace-cdn.com/content/v1/59a8b2229f8dceb86590396c/1554321482434-MJ7ZG46YJMUCP4QUOPF5/ke17ZwdGBToddI8pDm48kCX-V5vw-8h9IBXN10-_8XN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p4Wyba38KfG317vYluk45_zZdtnDCZTLKcP2mivxmYi50xvY5saIGKMgOza9mH4XA/thayne+robstad+-+Hearth-80.jpg?format=2500w");
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0.5vw);
+  -webkit-filter: blur(0.5vw);
 }
 
 #UIbutton {
   width: 40vw;
   border-radius: 10px;
-  padding: 1.25em;
+  padding: 0 1em;
   color: white;
   border-color: white;
   background-color: rgba(0,0, 0, 0.25);
+  font-size: 1.2em;
 }
 
 #UIbutton:hover {
   background-color: rgba(0,0, 0, 0.5);
+}
+
+.Link {
+  text-decoration: none !important;
 }
 
 .card {
@@ -51,8 +58,22 @@ code {
 }
 
 .dashboard {
-  background-color: lightgray;
-  padding: 5vw;
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+}
+
+.dashboard-image {
+  background-color: #F5F5F5;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* background-image: url("https://img.freepik.com/free-vector/abstract-paper-hexagon-white-background_51543-213.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0.5vw);
+  -webkit-filter: blur(0.5vw); */
+  z-index: -1;
 }
 
 .carousel {
@@ -88,4 +109,8 @@ code {
 }
 #monthSelect{
   width: 25vw;
+}
+
+.h1 {
+  margin: 0 !important;
 }
