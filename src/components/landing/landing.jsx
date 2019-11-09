@@ -2,29 +2,61 @@ import React from "react";
 import Button from '@material-ui/core/Button';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import AddIcon from '@material-ui/icons/Add';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import Files from 'react-files'
+import { setDatabase } from "../../actions/database_actions";
 
-const landing = () => {
-    return (
-        <div className="landing">
+class Landing extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.fileReader = new FileReader();
+
+        this.fileReader.onload = (event) => {
+
+            debugger
+            this.props.setDatabase(JSON.parse(event.target.result));
+            this.props.history.push(`/dashboard`);  
+        };
+    }
+
+    
+
+    render () {
+        return (
+            <div className="landing">
             <div className='landing-image'></div>
-            <div className="newData">
-                <Link className="Link" to="/dashboard">
-                    <Button id='UIbutton' variant="outlined" color="default" startIcon={<AddIcon />}>
-                        <p> Create New Data</p>
-                    </Button>
-                </Link>
+            <div>
+                
             </div>
-            <br /><br /><br /><br />
+            <br/><br/><br/><br/>
             <div className="oldData">
-                <Link className="Link" to="/dashboard">
-                    <Button id='UIbutton' variant="outlined" color="default" startIcon={<CloudUploadIcon />}>
-                        <p> Upload Existing Data </p>
+                {/* <Link className="Link" to="/dashboard"> */}
+                    <Button id='UIbutton' variant="outlined" component="label" color="default" startIcon={<CloudUploadIcon />}>
+                        <Files
+                            className="files-dropzone"
+                            onChange={file => {
+                                this.fileReader.readAsText(file[0]);
+                            }}
+                            onError={err => console.log(err)}
+                            accepts={['.json']}
+                            multiple
+                            maxFiles={3}
+                            maxFileSize={10000000}
+                            minFileSize={0}
+                            clickable
+                        >
+                            <p>Upload Database</p> 
+                        </Files>
                     </Button>
-                </Link>
+                {/* </Link> */}
             </div>
         </div>
-    );
-};
+        );
+    }
 
-export default landing;
+}
+
+
+export default withRouter(Landing);
+{/* <input type="file" style={{ display: "none" }} onChange={this.handleFiles}  /> */}
