@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
-import Landing from "./components/landing/landing";
+import Landing from "./components/landing/landing_container";
 import DashboardContainer from "./components/dashboard/dashboard_container";
 import Employee from "./components/employee/employee";
 import { connect } from 'react-redux';
