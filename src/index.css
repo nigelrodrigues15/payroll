@@ -31,6 +31,7 @@ code {
   background-size: cover;
   filter: blur(0.5vw);
   -webkit-filter: blur(0.5vw);
+  z-index: -1;
 }
 
 #UIbutton {
