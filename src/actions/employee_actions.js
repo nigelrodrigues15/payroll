@@ -1,6 +1,8 @@
-export const FETCH_EMPLOYEES = 'FETCH_EMPLOYEES';
-export const fetchEmployees = () => dispatch => dispatch({
-    type: FETCH_EMPLOYEES
+export const UPDATE_EMPLOYEE = 'UPDATE_EMPLOYEE';
+export const updateEmployee = (id, info) => dispatch => dispatch({
+    type: UPDATE_EMPLOYEE,
+    employeeID: id,
+    info
 });
 
 
