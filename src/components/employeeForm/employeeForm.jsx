@@ -7,38 +7,50 @@ class EmployeeForm extends React.Component {
     constructor(props) {
         super(props);
         this.parameters = {
-            "name": "Name",
+            "name": "Full Name",
             "DOB": "Date of Birth",
             "startDate": "Start Date",
             "defaultWage": "Default Wage",
-            "ytdEarnings": "YTD Earnings",
-            "ytdEI": "YTD EI",
-            "ytdCPP": "YTD CPP",
-            "ytdTax": "YTD Tax",
-            "ytdDeductions": "YTD Deductions"
+            "defaultEEhealth": "Employee Health Contr.",
+            "defaultERhealth": "Employer Health Contr."
         }
-        this.sampleEmployee ={
-            "name": "Person 1",
-            "DOB": "15/10/1995",
-            "startDate": "5/10/2005",
-            "defaultWage": "15.00",
-        }
+        this.state = {
+                name: "",
+                DOB: "",
+                startDate: "",
+                defaultWage: "15.00",
+                defaultEEhealth: "55.00",
+                defaultERhealth: "55.00"
+            };
+        this.handleInput = this.handleInput.bind(this);
+        
     }
 
-    employeeList(employee = this.sampleEmployee) {
+    handleInput(event) {
+        this.setState({ [event.target.name]: event.currentTarget.value });
+    }
+
+    employeeList(employee = this.state) {
         let data = Object.keys(employee);
         let i = 0;
-
+        let place;
         let result = data.map((key, i) => {
+            if (this.parameters[key].includes("Date")){
+                place = "DD/MM/YYYY"
+            }else{
+                place=""
+            }
             return (
                 <div key={i} className={"info-" + key}>
                     <TextField
                         id="outlined-multiline-flexible"
                         label={this.parameters[key]}
+                        name={key}
                         multiline
                         rowsMax="4"
-                        value={employee[key]}
-                        onChange='{handleChange}'
+                        value={this.state[key]}
+                        placeholder={place}
+                        onChange={this.handleInput}
                         variant="outlined"
                     />
                 </div>
@@ -47,6 +59,8 @@ class EmployeeForm extends React.Component {
         return result;
     }
     
+
+
     render() {
 
         return (
@@ -58,7 +72,7 @@ class EmployeeForm extends React.Component {
                 <div className='employee-info'>
                     <div className="basic-info">
                         {this.employeeList()}
-                        <Button id='button-create' variant="outlined" component="label" color="secondary">
+                        <Button id='button-func' variant="outlined" component="label" color="secondary">
                             Create
                         </Button>
                     </div>
