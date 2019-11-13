@@ -18,6 +18,7 @@ class Dashboard extends React.Component {
     }
 
     employeeList(employees=this.props.employees){
+        debugger
         let result = employees.map((employee,i) => {
             return (
                 <div key={i} className="carouselList">
