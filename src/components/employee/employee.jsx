@@ -10,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import PayslipForm from "./payslipForm"
 import Button from '@material-ui/core/Button';
+import merge from "lodash/merge";
 
 class Employee extends React.Component {
     constructor(props) {
@@ -22,14 +23,28 @@ class Employee extends React.Component {
             "defaultEEhealth": "Employee Health Contr.",
             "defaultERhealth": "Employer Health Contr."
         }
+        this.state = this.props.employee
+        this.handleInput = this.handleInput.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
     }
-
-    employeeList(employee = this.props.employee) {
+    handleInput(event) {
+        this.setState({ [event.target.name]: event.currentTarget.value });
+    }
+    handleUpdate(){
+        this.props.updateEmployee(this.props.employeeID, this.state);
+    }
+    employeeList(employee = merge({}, this.state)) {
         delete employee.payslips
         let data = Object.keys(employee);
         let i = 0;
+        let place;
 
         let result = data.map((key, i) => {
+            if (this.parameters[key].includes("Date")) {
+                place = "DD/MM/YYYY"
+            } else {
+                place = ""
+            }
             return (
                 <div key={i} className={"info-" + key}>
                     <TextField
@@ -37,8 +52,10 @@ class Employee extends React.Component {
                         label={this.parameters[key]}
                         multiline
                         rowsMax="4"
+                        name={key}
                         value={employee[key]}
-                        onChange='{handleChange}'
+                        placeholder={place}
+                        onChange={this.handleInput}
                         variant="outlined"
                     />
                 </div>
@@ -185,7 +202,6 @@ class Employee extends React.Component {
         });
         return result;
     }
-
     printIframe() {
         debugger
         const iframe = document.frames ? document.frames["pay"] : document.getElementById("pay");
@@ -210,6 +226,9 @@ class Employee extends React.Component {
                     <br />
                     <div className="basic-info">
                         {this.employeeList()}
+                        <Button id='button-func' onClick={this.handleUpdate} variant="outlined" component="label" color="secondary">
+                            Update
+                        </Button>
                     </div>
                 </div>
                 <h2 style={{ letterSpacing: 5 + 'px' }}>PAYSLIPS</h2>
