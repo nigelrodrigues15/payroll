@@ -79,7 +79,7 @@ class Dashboard extends React.Component {
             <div className="dashboard">
                 <div className='dashboard-image'></div>
                 <br /><br /><br />
-                <h1 style={{ letterSpacing: 15 + 'px' }} >DASHBOARD</h1>
+                <h1 style={{ letterSpacing: 15 + 'px', fontWeight: 400 }} >DASHBOARD</h1>
                 <br /><br /><br />
                 <div className="carousel">
                     <h1>EMPLOYEES</h1>
