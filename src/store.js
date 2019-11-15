@@ -7,6 +7,8 @@ import rootReducer from './reducers/rootReducer';
 //     months: ['Jan', 'Feb', 'Mar']
 // };
 
-export default function configureStore(preloadedState) {
-    return createStore(rootReducer, preloadedState, applyMiddleware(thunk));
+
+
+export default function configureStore(persistedState) {
+    return createStore(rootReducer, persistedState, applyMiddleware(thunk));
 }
