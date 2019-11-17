@@ -11,7 +11,6 @@ export const nextEmployeeId = 0;
 export const createEmployee = (employeeInfo) => dispatch => {
     dispatch({
         type: CREATE_EMPLOYEE,
-        id: nextEmployeeId++,
         employeeInfo
     })
 };
