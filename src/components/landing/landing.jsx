@@ -14,41 +14,36 @@ class Landing extends React.Component {
         this.fileReader = new FileReader();
 
         this.fileReader.onload = (event) => {
-
+            debugger
             this.props.setDatabase(JSON.parse(event.target.result));
-            this.props.history.push(`/dashboard`);  
+            this.props.history.push(`/dashboard`);
         };
+
     }
 
-    
-
-    render () {
+    render() {
         return (
             <div className="landing">
-            <div className='landing-image'></div>
-            <div className="oldData">
+                <div className='landing-image'></div>
+                <Files
+                    className="files-dropzone"
+                    onChange={file => {
+                        this.fileReader.readAsText(file[0]);
+                    }}
+                    onError={err => console.log(err)}
+                    accepts={['.json']}
+                    maxFileSize={10000000}
+                    minFileSize={0}
+                    clickable
+                >
                     <Button id='UIbutton' variant="outlined" component="label" color="default">
-                        <Files
-                            className="files-dropzone"
-                            onChange={file => {
-                                this.fileReader.readAsText(file[0]);
-                            }}
-                            onError={err => console.log(err)}
-                            accepts={['.json']}
-                            multiple
-                            maxFiles={3}
-                            maxFileSize={10000000}
-                            minFileSize={0}
-                            clickable
-                        >
-                            
-                            <h1><CloudUploadIcon style={{ fontSize: 45, marginRight: 45 }} /> Upload Database</h1> 
-                        </Files>
+
+                        <h1><CloudUploadIcon style={{ fontSize: 45, marginRight: 45 }} /> Upload Database</h1>
                     </Button>
+                </Files>
+                <br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br />
             </div>
-            <br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/>
-        </div>
         );
     }
 
@@ -56,4 +51,4 @@ class Landing extends React.Component {
 
 
 export default withRouter(Landing);
-{/* <input type="file" style={{ display: "none" }} onChange={this.handleFiles}  /> */}
+{/* <input type="file" style={{ display: "none" }} onChange={this.handleFiles}  /> */ }
