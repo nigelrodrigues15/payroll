@@ -15,7 +15,7 @@ import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers'
 class PayslipForm extends React.Component {
     constructor(props) {
         super(props);
-        this.parameters = {
+        this.employeeParam = {
             "name": "Name",
             "DOB": "Date of Birth",
             "startDate": "Start Date",
@@ -26,32 +26,68 @@ class PayslipForm extends React.Component {
             "ytdTax": "YTD Tax",
             "ytdDeductions": "YTD Deductions"
         }
+        this.payslipParam = {
+            payendDate: "Pay End Date",
+            regHrs: "Reg. Hrs.",
+            wage: "Wage",
+            otHrs: "0.00",
+            holidayHrs: "0.00",
+            incentive: "0.00",
+            employerHealth: "13.00",
+            EI: "0.00",
+            CPP: "0.00",
+            Tax: "0.00",
+            employeeHealth: "105.00"
+        };
+        this.state = {
+            payendDate: "1/10/2010",
+            regHrs: "0.00",
+            wage: "15.00",
+            otHrs: "0.00",
+            holidayHrs: "0.00",
+            incentive: "0.00",
+            employerHealth: "13.00",
+            EI: "0.00",
+            CPP: "0.00",
+            Tax: "0.00",
+            employeeHealth: "105.00"
+        };
+        this.handleInput = this.handleInput.bind(this)
     }
 
+    handleInput(event) {
+        debugger
+        this.setState({ [event.target.name]: event.currentTarget.value });
+    }
 
-    payslipList(payslip, employee) {
-        var dateParts = payslip.payendDate.split("/");
+    results() {
+        var dateParts = this.state.payendDate.split("/");
         var payendDate = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
         let paymentDate = new Date(payendDate.getTime() + (7 * 24 * 60 * 60 * 1000));
-        let totalReg = (parseFloat(payslip.wage) * parseFloat(payslip.regHrs));
-        let totalOT = (parseFloat(payslip.wage) * 1.5 * parseFloat(payslip.otHrs));
-        let totalHld = (parseFloat(payslip.wage) * 1.5 * parseFloat(payslip.holidayHrs));
+        let totalReg = (parseFloat(this.state.wage) * parseFloat(this.state.regHrs));
+        let totalOT = (parseFloat(this.state.wage) * 1.5 * parseFloat(this.state.otHrs));
+        let totalHld = (parseFloat(this.state.wage) * 1.5 * parseFloat(this.state.holidayHrs));
         let vacationPay = (totalReg * 0.04);
         let totalEarn = totalReg + totalOT + totalHld + vacationPay;
-        let totalDeduct = parseFloat(payslip.EI) + parseFloat(payslip.CPP) + parseFloat(payslip.Tax) + parseFloat(payslip.employeeHealth)
-        return null
+        let totalDeduct = parseFloat(this.state.EI) + parseFloat(this.state.CPP) + parseFloat(this.state.Tax) + parseFloat(this.state.employeeHealth)
+        return {
+            totalReg: totalReg,
+            totalOT: totalOT,
+            totalHld
+        }
     }
 
-    textarea(label, value = "--") {
+    textarea(key, value = "--") {
 
         return (
             <TextField
                 id="outlined-multiline-flexible"
-                label={label}
+                label={this.payslipParam[key]}
+                name={key}
                 multiline
                 rowsMax="4"
                 value={value}
-                onChange='{handleChange}'
+                onChange={this.handleInput}
                 variant="outlined"
             />
         );
@@ -68,7 +104,7 @@ class PayslipForm extends React.Component {
                     id="date-picker-inline"
                     label={label}
                     value={value}
-                    onChange={"handleDateChange"}
+                    onChange={this.handleInput}
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
                     }}
@@ -79,6 +115,7 @@ class PayslipForm extends React.Component {
 
     render() {
         let todaysDate = new Date();
+        let results = this.results()
         console.log(todaysDate)
         return (
             <div className="newpayslip">
@@ -112,9 +149,9 @@ class PayslipForm extends React.Component {
                             <TableBody>
                                 <TableRow key='{row.name}'>
                                     <TableCell><h4>Regular</h4></TableCell>
-                                    <TableCell align="right"><h4>{this.textarea("Reg. Hrs.")}</h4></TableCell>
-                                    <TableCell align="right"><h4>{this.textarea("Wage", this.props.employee.defaultWage)}</h4></TableCell>
-                                    <TableCell align="right"><h4>{"totalreg"}</h4></TableCell>
+                                    <TableCell align="right"><h4>{this.textarea('regHrs', this.state.regHrs)}</h4></TableCell>
+                                    <TableCell align="right"><h4>{this.textarea('wage', this.props.employee.defaultWage)}</h4></TableCell>
+                                    <TableCell align="right"><h4>{results.totalReg.toFixed(2)}</h4></TableCell>
                                     <TableCell align="right"><h4></h4></TableCell>
                                     <TableCell><h4>Employment Insurance</h4></TableCell>
                                     <TableCell align="right"><h4>{"EI"}</h4></TableCell>
