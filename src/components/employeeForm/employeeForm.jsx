@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import merge from "lodash/merge";
 
 class EmployeeForm extends React.Component {
     constructor(props) {
@@ -20,17 +21,23 @@ class EmployeeForm extends React.Component {
                 startDate: "",
                 defaultWage: "15.00",
                 defaultEEhealth: "55.00",
-                defaultERhealth: "55.00"
+                defaultERhealth: "55.00",
+                payslips:[]
             };
         this.handleInput = this.handleInput.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);
         
     }
 
     handleInput(event) {
         this.setState({ [event.target.name]: event.currentTarget.value });
     }
-
-    employeeList(employee = this.state) {
+    handleCreate() {
+        this.props.createEmployee(this.state);
+        this.props.history.push(`/dashboard`); 
+    }
+    employeeList(employee = merge({}, this.state)) {
+        delete employee.payslips
         let data = Object.keys(employee);
         let i = 0;
         let place;
@@ -72,7 +79,7 @@ class EmployeeForm extends React.Component {
                 <div className='employee-info'>
                     <div className="basic-info">
                         {this.employeeList()}
-                        <Button id='button-func' variant="outlined" component="label" color="secondary">
+                        <Button id='button-func' onClick={this.handleCreate} variant="outlined" component="label" color="secondary">
                             Create
                         </Button>
                     </div>
