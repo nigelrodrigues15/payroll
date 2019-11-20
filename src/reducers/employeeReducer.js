@@ -9,21 +9,12 @@ const employeeReducer = (state = initialState, action) => {
   switch (action.type) {
 
     case UPDATE_EMPLOYEE:
-      console.log('fetching employees')
-      console.log(newState)
-      console.log(action.info)
       merge(newState[action.employeeID], action.info);
-      
     return newState;
 
     case CREATE_EMPLOYEE:
-    return [
-        ...state,
-        {
-            id: action.id,
-            info: action.employeeInfo
-        }
-    ]
+      newState.push(action.employeeInfo)
+    return newState;
 
     case SHOW_EMPLOYEE:
     return action.payload;
