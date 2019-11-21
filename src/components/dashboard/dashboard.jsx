@@ -34,11 +34,11 @@ class Dashboard extends React.Component {
     monthList(months = this.props.months) {
         let result = months.map((month, i) => {
             return (
-                <div key={i} className="carouselList">
-                    <Link className="Link" to={`/${month}`}>
-                        <div className='listContent'> {month} </div>
-                    </Link>
-                </div>
+                <Link className="Link" >
+                    <Button id='button-month' size="large" className="carouselList" variant="outlined" component="label" color="primary">
+                        <div className='listContent'>{month}</div>
+                    </Button>
+                </Link>
             )
         });
         return result;
@@ -85,7 +85,7 @@ class Dashboard extends React.Component {
                     <h1>EMPLOYEES</h1>
                     <br />
                     <div className='carousel-layout'>
-                        <Link className="Link newEmployee" to="/newEmployee">
+                        <Link className="Link doublespan" to="/newEmployee">
                             <Button id='button-employee' size='large' className="carouselList" variant="outlined" component="label" color="secondary">
 
                                 <div className='listContent'> + New Employee</div>
@@ -98,35 +98,19 @@ class Dashboard extends React.Component {
                 <br /><br /><br />
                 <div className="carousel">
                     <h1>MONTHLY SUMMARY</h1>
-                    <Carousel
-                        responsive={responsive}
-                        additionalTransfrom={0}
-                        arrows
-                        autoPlaySpeed={3000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container"
-                        dotListClass=""
-                        draggable
-                        focusOnSelect={false}
-                        infinite
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={80}
-                        partialVisible
-                        renderButtonGroupOutside={false}
-                        renderDotsOutside={false}
-                        showDots={false}
-                        sliderClass=""
-                        slidesToSlide={1}
-                        swipeable
-                    >
+                    <br/><br/>
+                    <div className='carousel-layout'>
+                        <Link className="Link doublespan" >
+                            <Button id='button-year' size="large" className="carouselList" variant="outlined" component="label" color="secondary">
+                                <div className='listContent'>Year to Date</div>
+                            </Button>
+                        </Link>
                         {this.monthList()}
+                    </div>
 
-                    </Carousel>
                 </div>
                 <br /><br /><br />
-                <div className="payperiod">
+                {/* <div className="payperiod">
                     <FormControl id='paypperiodMonth'>
                         <InputLabel id="monthLabel">PayPeriod Month</InputLabel>
                         <Select
@@ -144,7 +128,7 @@ class Dashboard extends React.Component {
                         </Select>
                         <FormHelperText>Select PayPeriod Month</FormHelperText>
                     </FormControl>
-                </div>
+                </div> */}
             </div>
         );
     };
