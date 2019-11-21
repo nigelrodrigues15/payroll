@@ -21,6 +21,7 @@ code {
 .landing {
   width: 100vw;
   height: 100vh;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,11 +78,13 @@ code {
 .dashboard {
   width: 100vw;
   height: 100vh;
-  display: inline-block;
+  position: absolute;
+  /* display: inline-block; */
 }
 
 .dashboard-image {
-  background-color: #F5F5F5;
+  /* background-color: #F5F5F5; */
+  background-color: white;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -206,8 +209,16 @@ code {
   width: 100%;
   padding: 1em;
 }
-.newEmployee{
+.doublespan{
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row: 1;
+}
+#button-month{
+  color: rgb(0, 129, 0);
+  border: 1px solid rgb(0, 173, 0);
+}
+#button-month:hover{
+  background-color: rgba(0, 139, 53, 0.137);
+  border: 1px solid rgb(0, 138, 0);
 }
