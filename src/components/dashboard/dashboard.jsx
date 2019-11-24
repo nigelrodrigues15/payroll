@@ -97,7 +97,7 @@ class Dashboard extends React.Component {
                 </div>
                 <br /><br /><br />
                 <div className="carousel">
-                    <h1>MONTHLY SUMMARY</h1>
+                    <h1>SUMMARY</h1>
                     <br/><br/>
                     <div className='carousel-layout'>
                         <Link className="Link doublespan" >
