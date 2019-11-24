@@ -5,6 +5,13 @@ export const updateEmployee = (id, info) => dispatch => dispatch({
     info
 });
 
+export const CREATE_PAYSLIP = 'CREATE_PAYSLIP';
+export const createPayslip = (id, info) => dispatch => dispatch({
+    type: CREATE_PAYSLIP,
+    employeeID: id,
+    info
+});
+
 
 export const CREATE_EMPLOYEE = 'CREATE_EMPLOYEE';
 export const nextEmployeeId = 0;
