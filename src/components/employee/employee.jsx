@@ -233,7 +233,7 @@ class Employee extends React.Component {
                 </div>
                 <h2 style={{ letterSpacing: 5 + 'px' }}>PAYSLIPS</h2>
                 <div className="payslips">
-                    <PayslipForm employee={this.props.employee}/>
+                    <PayslipForm employee={this.props.employee} employeeID={this.props.employeeID} createPayslip={this.props.createPayslip}/>
                     {this.payslipsList().reverse()}
                     <br /><br /><br />
                     <br /><br /><br />
