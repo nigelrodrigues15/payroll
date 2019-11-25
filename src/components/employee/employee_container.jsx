@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { updateEmployee, createEmployee, showEmployee, removeEmployee } from "../../actions/employee_actions";
+import { updateEmployee, createEmployee, createPayslip, showEmployee, removeEmployee } from "../../actions/employee_actions";
 import Employee from "./employee";
 
 const mapStateToProps = (state, ownprops) => {
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => {
   return {
     updateEmployee: (id, info) => dispatch(updateEmployee(id, info)),
     createEmployee: employeeInfo => dispatch(createEmployee(employeeInfo)),
+    createPayslip: (id, payslipInfo) => dispatch(createPayslip(id, payslipInfo)),
     showEmployee: () => dispatch(showEmployee()),
     removeEmployee: employeeId => dispatch(removeEmployee(employeeId))
   };
