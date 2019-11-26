@@ -1,5 +1,5 @@
 import merge from "lodash/merge";
-import { UPDATE_EMPLOYEE, CREATE_EMPLOYEE, SHOW_EMPLOYEE, REMOVE_EMPLOYEE } from "../actions/employee_actions";
+import { UPDATE_EMPLOYEE, CREATE_EMPLOYEE, CREATE_PAYSLIP, SHOW_EMPLOYEE, REMOVE_EMPLOYEE } from "../actions/employee_actions";
 
 const initialState = {};
 
@@ -10,6 +10,11 @@ const employeeReducer = (state = initialState, action) => {
 
     case UPDATE_EMPLOYEE:
       merge(newState[action.employeeID], action.info);
+    return newState;
+
+    case CREATE_PAYSLIP:
+      debugger
+      newState[action.employeeID].payslips.push(action.info);
     return newState;
 
     case CREATE_EMPLOYEE:
