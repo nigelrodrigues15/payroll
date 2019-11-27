@@ -253,7 +253,7 @@ class PayslipForm extends React.Component {
                                     <TableCell align="right"><h4>{results.totalEarn.toFixed(2)}</h4></TableCell>
                                     <TableCell align="right"><h4>$$$</h4></TableCell>
                                     <TableCell><h4>Total Deductions</h4></TableCell>
-                                    <TableCell align="right"><h4>{"$$$"}</h4></TableCell>
+                                    <TableCell align="right"><h4>{results.totalDeduct.toFixed(2)}</h4></TableCell>
                                     <TableCell align="right"><h4>$$$</h4></TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -267,7 +267,10 @@ class PayslipForm extends React.Component {
                     </TableContainer>
                     <br/>
                     <div className="payslipformActions">
-                        <Button id='button-create' onClick={this.handleCreate} variant="outlined" component="label" color="secondary">
+                        <Button id='button-task' variant="outlined" component="label" color="primary" href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-businesses/payroll-deductions-online-calculator.html">
+                            CRA Check
+                        </Button>
+                        <Button id='button-task' onClick={this.handleCreate} variant="outlined" component="label" color="secondary">
                             Create
                         </Button>
                     </div>
