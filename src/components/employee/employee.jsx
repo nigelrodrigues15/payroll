@@ -23,7 +23,8 @@ class Employee extends React.Component {
             "defaultEEhealth": "Employee Health Contr.",
             "defaultERhealth": "Employer Health Contr."
         }
-        this.state = this.props.employee
+        this.state = this.props.employee;
+        this.YTD = {earnings:[], deductions: []};
         this.handleInput = this.handleInput.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
     }
@@ -63,7 +64,20 @@ class Employee extends React.Component {
         });
         return result;
     }
-    payslipList(payslip, employee) {
+
+    calculateYTD(index){
+        let earn = 0;
+        let deduct = 0;
+
+        for (let i=0; i<=index; i++) {
+            earn += this.YTD.earnings[i];
+            deduct += this.YTD.deductions[i];
+        }
+
+        return {earn, deduct};
+    }
+
+    payslipList(payslip, employee, index) {
         var dateParts = payslip.payendDate.split("/");
         var payendDate = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
         let paymentDate = new Date(payendDate.getTime() + (7 * 24 * 60 * 60 * 1000));
@@ -72,7 +86,9 @@ class Employee extends React.Component {
         let totalHld = (parseFloat(payslip.wage) * 1.5 * parseFloat(payslip.holidayHrs));
         let vacationPay = (totalReg * 0.04);
         let totalEarn = totalReg + totalOT + totalHld + vacationPay;
+        this.YTD.earnings.push(totalEarn);
         let totalDeduct = parseFloat(payslip.EI) + parseFloat(payslip.CPP) + parseFloat(payslip.Tax) + parseFloat(payslip.employeeHealth)
+        this.YTD.deductions.push(totalDeduct);
         return (
             <div key={"i"} id="pay" className={"paycheck"}>
                 <br/><br/>
@@ -167,23 +183,23 @@ class Employee extends React.Component {
                                 <TableCell align="right"><h4></h4></TableCell>
                                 <TableCell align="right"><h4></h4></TableCell>
                                 <TableCell align="right"><h4>{totalEarn.toFixed(2)}</h4></TableCell>
-                                <TableCell align="right"><h4>YTD amount</h4></TableCell>
+                                <TableCell align="right"><h4>{this.calculateYTD(index).earn.toFixed(2)}</h4></TableCell>
                                 <TableCell><h4>Total Deductions</h4></TableCell>
                                 <TableCell align="right"><h4>{totalDeduct.toFixed(2)}</h4></TableCell>
-                                <TableCell align="right"><h4>YTD amount</h4></TableCell>
+                                <TableCell align="right"><h4>{this.calculateYTD(index).deduct.toFixed(2)}</h4></TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell align="right" colSpan={2}><h4 style={{ letterSpacing: 5 }}>Net Pay</h4></TableCell>
                                 <TableCell align="left" colSpan={2}><h4 >{(totalEarn - totalDeduct).toFixed(2)}</h4></TableCell>
                                 <TableCell align="right" colSpan={2}><h4 style={{ letterSpacing: 5 }}>YTD Net Pay</h4></TableCell>
-                                <TableCell align="left" colSpan={2}><h4 style={{ letterSpacing: 5 }}>ToBeFilled</h4></TableCell>
+                                <TableCell align="left" colSpan={2}><h4>{(this.calculateYTD(index).earn - this.calculateYTD(index).deduct).toFixed(2)}</h4></TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
                 </TableContainer>
                 <br/>
                 <div className="payslipActions">
-                    <Button id='button-task' variant="outlined" component="label" color="secondary">
+                    <Button id='button-task' variant="outlined" component="label" color="primary" href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-businesses/payroll-deductions-online-calculator.html">
                         CRA Check
                     </Button>
                     <Button id='button-task' variant="outlined" component="label" color="secondary">
@@ -197,7 +213,7 @@ class Employee extends React.Component {
     payslipsList(payslips = this.props.payslips){
         let result = payslips.map((payslip, i) => {
             return (
-                this.payslipList(payslip, this.props.employee)
+                this.payslipList(payslip, this.props.employee, i)
             )
         });
         return result;
