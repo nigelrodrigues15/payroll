@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Payrollz/static/css/main.d1b05096.chunk.css",
+    "main.js": "/Payrollz/static/js/main.bcf579f0.chunk.js",
+    "main.js.map": "/Payrollz/static/js/main.bcf579f0.chunk.js.map",
+    "runtime-main.js": "/Payrollz/static/js/runtime-main.757a2628.js",
+    "runtime-main.js.map": "/Payrollz/static/js/runtime-main.757a2628.js.map",
+    "static/js/2.b6c55dd8.chunk.js": "/Payrollz/static/js/2.b6c55dd8.chunk.js",
+    "static/js/2.b6c55dd8.chunk.js.map": "/Payrollz/static/js/2.b6c55dd8.chunk.js.map",
+    "index.html": "/Payrollz/index.html",
+    "precache-manifest.6656e27f9af5ad266438e6f4b1339827.js": "/Payrollz/precache-manifest.6656e27f9af5ad266438e6f4b1339827.js",
+    "service-worker.js": "/Payrollz/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/Payrollz/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.b6c55dd8.chunk.js.LICENSE": "/Payrollz/static/js/2.b6c55dd8.chunk.js.LICENSE",
+    "static/media/logo.svg": "/Payrollz/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.757a2628.js",
+    "static/js/2.b6c55dd8.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.bcf579f0.chunk.js"
+  ]
+}
