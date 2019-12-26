@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Lato Thin';
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,4 +35,57 @@ code {
   width: 40vw;
   border-radius: 10px;
   padding: 1.25em;
+  color: white;
+  border-color: white;
+  background-color: rgba(0,0, 0, 0.25);
+}
+
+#UIbutton:hover {
+  background-color: rgba(0,0, 0, 0.5);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 30vw;
+}
+
+.dashboard {
+  background-color: lightgray;
+  padding: 5vw;
+}
+
+.carousel {
+  padding-bottom: '30px';
+  position: 'relative';
+}
+
+.react-multi-carousel-item {
+  width: 15vw;
+  height: 15vw;
+}
+
+.carouselList {
+  margin: 0 15px;
+  overflow: hidden;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+.listContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato Thin';
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+#paypperiodMonth{
+  margin: 5px;
+  min-width: 120px;
+}
+#monthSelect{
+  width: 25vw;
 }
