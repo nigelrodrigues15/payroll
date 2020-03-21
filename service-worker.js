@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PayRollz/precache-manifest.1e4b60a21d2f3f8903a91051beb013d2.js"
+  "/PayRollz/precache-manifest.d4f461b99a5a706520b0b18106b6447c.js"
 );
 
 self.addEventListener('message', (event) => {
