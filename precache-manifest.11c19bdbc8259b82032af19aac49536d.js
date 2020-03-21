@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bcb16e534d43ced898f3b4f492875970",
+    "revision": "d746f58d4b89d5294d464147978f2d20",
     "url": "/PayRollz/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PayRollz/static/css/2.d3dd937c.chunk.css"
   },
   {
-    "revision": "bb66b3658c2efa8d2b77",
-    "url": "/PayRollz/static/css/main.74d9bc39.chunk.css"
+    "revision": "e5416142e0b57da047af",
+    "url": "/PayRollz/static/css/main.bdeb1ce3.chunk.css"
   },
   {
     "revision": "d8b56081898e330230de",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PayRollz/static/js/2.efdb5873.chunk.js.LICENSE"
   },
   {
-    "revision": "bb66b3658c2efa8d2b77",
-    "url": "/PayRollz/static/js/main.ad6a4355.chunk.js"
+    "revision": "e5416142e0b57da047af",
+    "url": "/PayRollz/static/js/main.6066a9fa.chunk.js"
   },
   {
     "revision": "bfebb8bc99bd35e8cfdf",
