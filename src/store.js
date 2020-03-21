@@ -1,6 +1,12 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
-export default function configureStore() {
- return createStore(rootReducer, applyMiddleware(thunk));
+
+// const initialState = {
+//     employees: [],
+//     months: ['Jan', 'Feb', 'Mar']
+// };
+
+export default function configureStore(preloadedState) {
+    return createStore(rootReducer, preloadedState, applyMiddleware(thunk));
 }
