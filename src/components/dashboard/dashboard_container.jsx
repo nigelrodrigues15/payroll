@@ -3,9 +3,11 @@ import { fetchEmployees, createEmployee, showEmployee, removeEmployee } from "..
 import Dashboard from "./dashboard";
 
 const mapStateToProps = (state, ownprops) => {
+  console.log('mapstate2props')
+  console.log(state)
   return {
     employees: state.employees,
-    random: [1,2,3,4,5]
+    months: state.months
   };
 };
 
