@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
 import Landing from "./components/landing/landing";
-import Dashboard from "./components/dashboard/dashboard";
+import DashboardContainer from "./components/dashboard/dashboard_container";
+import Employee from "./components/employee/employee";
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -11,7 +12,8 @@ class App extends Component {
    <div className="App">
     
     <Switch>
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/dashboard" component={DashboardContainer} />
+        <Route exact path="/employee/:employeeName" component={Employee} />
         <Route exact path="/" component={Landing} />
     </Switch>
 
