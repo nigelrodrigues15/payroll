@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Payrollz/static/css/main.98ba1421.chunk.css",
-    "main.js": "/Payrollz/static/js/main.92941bcd.chunk.js",
-    "main.js.map": "/Payrollz/static/js/main.92941bcd.chunk.js.map",
-    "runtime-main.js": "/Payrollz/static/js/runtime-main.757a2628.js",
-    "runtime-main.js.map": "/Payrollz/static/js/runtime-main.757a2628.js.map",
+    "main.js": "/Payrollz/static/js/main.73796f4a.chunk.js",
+    "main.js.map": "/Payrollz/static/js/main.73796f4a.chunk.js.map",
+    "runtime-main.js": "/Payrollz/static/js/runtime-main.f44d27b8.js",
+    "runtime-main.js.map": "/Payrollz/static/js/runtime-main.f44d27b8.js.map",
     "static/css/2.3a400ab4.chunk.css": "/Payrollz/static/css/2.3a400ab4.chunk.css",
-    "static/js/2.929a27fb.chunk.js": "/Payrollz/static/js/2.929a27fb.chunk.js",
-    "static/js/2.929a27fb.chunk.js.map": "/Payrollz/static/js/2.929a27fb.chunk.js.map",
+    "static/js/2.e3ae287e.chunk.js": "/Payrollz/static/js/2.e3ae287e.chunk.js",
+    "static/js/2.e3ae287e.chunk.js.map": "/Payrollz/static/js/2.e3ae287e.chunk.js.map",
     "index.html": "/Payrollz/index.html",
-    "precache-manifest.bde31e107861e4d742fad1b9080d61c8.js": "/Payrollz/precache-manifest.bde31e107861e4d742fad1b9080d61c8.js",
+    "precache-manifest.c89d1fdc557aff6455125f5a88f76ad7.js": "/Payrollz/precache-manifest.c89d1fdc557aff6455125f5a88f76ad7.js",
     "service-worker.js": "/Payrollz/service-worker.js",
     "static/css/2.3a400ab4.chunk.css.map": "/Payrollz/static/css/2.3a400ab4.chunk.css.map",
     "static/css/main.98ba1421.chunk.css.map": "/Payrollz/static/css/main.98ba1421.chunk.css.map",
-    "static/js/2.929a27fb.chunk.js.LICENSE": "/Payrollz/static/js/2.929a27fb.chunk.js.LICENSE",
+    "static/js/2.e3ae287e.chunk.js.LICENSE": "/Payrollz/static/js/2.e3ae287e.chunk.js.LICENSE",
     "static/media/styles.css": "/Payrollz/static/media/revicons.2feb69cc.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.757a2628.js",
+    "static/js/runtime-main.f44d27b8.js",
     "static/css/2.3a400ab4.chunk.css",
-    "static/js/2.929a27fb.chunk.js",
+    "static/js/2.e3ae287e.chunk.js",
     "static/css/main.98ba1421.chunk.css",
-    "static/js/main.92941bcd.chunk.js"
+    "static/js/main.73796f4a.chunk.js"
   ]
 }
