@@ -11,15 +11,38 @@ import Select from '@material-ui/core/Select';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        
-        // this.employees = this.employees.bind(this);
-    }
-
-    componentDidMount() {
         debugger
-        this.props.fetchEmployees();
     }
 
+    componentWillMount() {
+        console.log('component will mount')
+    }
+
+    employeeList(employees=this.props.employees){
+        let result = employees.map((employee,i) => {
+            return (
+                <div key={i} className="carouselList">
+                        <Link className="Link" to={`/employee/${employee}`}>
+                                 <div className='listContent'>{employee}</div>
+                        </Link>
+                </div>
+            )
+        });
+        return result;
+    }
+
+    monthList(months=this.props.months){
+        let result = months.map((month,i) => {
+            return (
+                <div key={i} className="carouselList">
+                        <Link className="Link" to={`/${month}`}>
+                            <div className='listContent'> {month} </div>
+                        </Link>
+                </div>
+            )
+        });
+        return result;
+    }
 
     render() {
 
@@ -83,23 +106,14 @@ class Dashboard extends React.Component {
                         slidesToSlide={1}
                         swipeable
                     >
-                        <div className="carouselList">
-                            <div className='listContent'> + New Employee</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>Nigel Rodrigues</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>Employee Name</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>Employee Name</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>Employee Name</div>
-                        </div>
 
-
+                        <div className="carouselList">
+                            <Link className="Link" to="/employee">
+                                <div className='listContent'> + New Employee</div>
+                            </Link>
+                        </div>
+                        {this.employeeList()}
+                        
                     </Carousel>
                 </div>
                 <br /><br /><br />
@@ -128,22 +142,7 @@ class Dashboard extends React.Component {
                         slidesToSlide={1}
                         swipeable
                     >
-                        <div className="carouselList">
-                            <div className='listContent'> January</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>Feburary</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>March</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>April</div>
-                        </div>
-                        <div className="carouselList">
-                            <div className='listContent'>May</div>
-                        </div>
-
+                        {this.monthList()}
 
                     </Carousel>
                 </div>
