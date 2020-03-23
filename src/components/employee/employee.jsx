@@ -48,7 +48,7 @@ class Employee extends React.Component {
         });
         return result;
     }
-    payslipList(payslip = this.props.payslips[0], employee = this.props.employee) {
+    payslipList(payslip, employee) {
         var dateParts = payslip.payendDate.split("/");
         var payendDate = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
         let paymentDate = new Date(payendDate.getTime() + (7 * 24 * 60 * 60 * 1000));
@@ -60,6 +60,7 @@ class Employee extends React.Component {
         let totalDeduct = parseFloat(payslip.EI) + parseFloat(payslip.CPP) + parseFloat(payslip.Tax) + parseFloat(payslip.employeeHealth)
         return (
             <div key={"i"} id="pay" className={"paycheck"}>
+                <br/><br/>
                 <TableContainer component={Paper}>
                     <Table className={"classes.table"} aria-label="simple table">
                         <TableHead>
@@ -165,8 +166,17 @@ class Employee extends React.Component {
                         </TableBody>
                     </Table>
                 </TableContainer>
+                <br/><br/>
             </div>
         );
+    }
+    payslipsList(payslips = this.props.payslips){
+        let result = payslips.map((payslip, i) => {
+            return (
+                this.payslipList(payslip, this.props.employee)
+            )
+        });
+        return result;
     }
 
     printIframe() {
@@ -197,7 +207,7 @@ class Employee extends React.Component {
                 </div>
                 <h2 style={{ letterSpacing: 5 + 'px' }}>PAYSLIPS</h2>
                 <div className="payslips">
-                    {this.payslipList()}
+                    {this.payslipsList()}
                     <br /><br /><br />
                     <br /><br /><br />
                     <br /><br /><br />
