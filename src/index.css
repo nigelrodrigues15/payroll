@@ -123,6 +123,7 @@ code {
 }
 .listContent:hover {
   background-color: rgba(100,100, 100, 0.15);
+  /* border: crimson 2px; */
 }
 #paypperiodMonth{
   margin: 5px;
