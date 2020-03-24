@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/PayRollz/static/css/main.c7c23449.chunk.css",
-    "main.js": "/PayRollz/static/js/main.d0ec0cb6.chunk.js",
-    "main.js.map": "/PayRollz/static/js/main.d0ec0cb6.chunk.js.map",
+    "main.css": "/PayRollz/static/css/main.9b4af7a3.chunk.css",
+    "main.js": "/PayRollz/static/js/main.7579abf2.chunk.js",
+    "main.js.map": "/PayRollz/static/js/main.7579abf2.chunk.js.map",
     "runtime-main.js": "/PayRollz/static/js/runtime-main.d96fbcb9.js",
     "runtime-main.js.map": "/PayRollz/static/js/runtime-main.d96fbcb9.js.map",
     "static/css/2.d3dd937c.chunk.css": "/PayRollz/static/css/2.d3dd937c.chunk.css",
-    "static/js/2.683418c1.chunk.js": "/PayRollz/static/js/2.683418c1.chunk.js",
-    "static/js/2.683418c1.chunk.js.map": "/PayRollz/static/js/2.683418c1.chunk.js.map",
+    "static/js/2.98a4eb1e.chunk.js": "/PayRollz/static/js/2.98a4eb1e.chunk.js",
+    "static/js/2.98a4eb1e.chunk.js.map": "/PayRollz/static/js/2.98a4eb1e.chunk.js.map",
     "index.html": "/PayRollz/index.html",
-    "precache-manifest.33fea329086205164ade40af79ca28ce.js": "/PayRollz/precache-manifest.33fea329086205164ade40af79ca28ce.js",
+    "precache-manifest.9faff267fe05f5746fc4dcebe4fcf18b.js": "/PayRollz/precache-manifest.9faff267fe05f5746fc4dcebe4fcf18b.js",
     "service-worker.js": "/PayRollz/service-worker.js",
     "static/css/2.d3dd937c.chunk.css.map": "/PayRollz/static/css/2.d3dd937c.chunk.css.map",
-    "static/css/main.c7c23449.chunk.css.map": "/PayRollz/static/css/main.c7c23449.chunk.css.map",
-    "static/js/2.683418c1.chunk.js.LICENSE": "/PayRollz/static/js/2.683418c1.chunk.js.LICENSE",
+    "static/css/main.9b4af7a3.chunk.css.map": "/PayRollz/static/css/main.9b4af7a3.chunk.css.map",
+    "static/js/2.98a4eb1e.chunk.js.LICENSE": "/PayRollz/static/js/2.98a4eb1e.chunk.js.LICENSE",
     "static/media/styles.css": "/PayRollz/static/media/revicons.2feb69cc.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.d96fbcb9.js",
     "static/css/2.d3dd937c.chunk.css",
-    "static/js/2.683418c1.chunk.js",
-    "static/css/main.c7c23449.chunk.css",
-    "static/js/main.d0ec0cb6.chunk.js"
+    "static/js/2.98a4eb1e.chunk.js",
+    "static/css/main.9b4af7a3.chunk.css",
+    "static/js/main.7579abf2.chunk.js"
   ]
 }
