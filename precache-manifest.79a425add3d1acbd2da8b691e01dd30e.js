@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df56a643684fc66454e741dccfb2edad",
+    "revision": "6c2b60970556b9f383b66099b70e4717",
     "url": "/PayRollz/index.html"
   },
   {
-    "revision": "d4dbb962b028f8d47da5",
+    "revision": "9043f12ba06b6bcadf2a",
     "url": "/PayRollz/static/css/2.d3dd937c.chunk.css"
   },
   {
-    "revision": "29c5ed5134162e3f1e83",
-    "url": "/PayRollz/static/css/main.9b4af7a3.chunk.css"
+    "revision": "c5a48a634e47b444fb90",
+    "url": "/PayRollz/static/css/main.36201c55.chunk.css"
   },
   {
-    "revision": "d4dbb962b028f8d47da5",
-    "url": "/PayRollz/static/js/2.98a4eb1e.chunk.js"
+    "revision": "9043f12ba06b6bcadf2a",
+    "url": "/PayRollz/static/js/2.94a3d6ac.chunk.js"
   },
   {
     "revision": "b51e62edbcf7a9c4f4ad13f506021d3e",
-    "url": "/PayRollz/static/js/2.98a4eb1e.chunk.js.LICENSE"
+    "url": "/PayRollz/static/js/2.94a3d6ac.chunk.js.LICENSE"
   },
   {
-    "revision": "29c5ed5134162e3f1e83",
-    "url": "/PayRollz/static/js/main.7579abf2.chunk.js"
+    "revision": "c5a48a634e47b444fb90",
+    "url": "/PayRollz/static/js/main.d695b1f4.chunk.js"
   },
   {
     "revision": "bfebb8bc99bd35e8cfdf",
