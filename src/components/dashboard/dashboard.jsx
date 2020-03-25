@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -17,26 +18,26 @@ class Dashboard extends React.Component {
         console.log('component will mount')
     }
 
-    employeeList(employees=this.props.employees){
-        let result = employees.map((employee,i) => {
+    employeeList(employees = this.props.employees) {
+        let result = employees.map((employee, i) => {
             return (
-                <div key={i} className="carouselList">
-                        <Link className="Link" to={`/employee/${i}`}>
-                                 <div className='listContent'>{employee.name}</div>
-                        </Link>
-                </div>
+                <Link className="Link" to={`/employee/${i}`}>
+                    <Button id='button-employee' size="large" className="carouselList" variant="outlined" component="label" color="primary">
+                        <div className='listContent'>{employee.name}</div>
+                    </Button>
+                </Link>
             )
         });
         return result;
     }
 
-    monthList(months=this.props.months){
-        let result = months.map((month,i) => {
+    monthList(months = this.props.months) {
+        let result = months.map((month, i) => {
             return (
                 <div key={i} className="carouselList">
-                        <Link className="Link" to={`/${month}`}>
-                            <div className='listContent'> {month} </div>
-                        </Link>
+                    <Link className="Link" to={`/${month}`}>
+                        <div className='listContent'> {month} </div>
+                    </Link>
                 </div>
             )
         });
@@ -78,42 +79,21 @@ class Dashboard extends React.Component {
             <div className="dashboard">
                 <div className='dashboard-image'></div>
                 <br /><br /><br />
-                <h1 style={{ letterSpacing: 15 + 'px', fontWeight: 400 }} >DASHBOARD</h1>
+                <h1 style={{ letterSpacing: 15 }} >DASHBOARD</h1>
                 <br /><br /><br />
                 <div className="carousel">
                     <h1>EMPLOYEES</h1>
-                    <Carousel
-                        responsive={responsive}
-                        additionalTransfrom={0}
-                        arrows
-                        autoPlaySpeed={3000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container"
-                        dotListClass=""
-                        draggable
-                        focusOnSelect={false}
-                        infinite
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={80}
-                        partialVisible
-                        renderButtonGroupOutside={false}
-                        renderDotsOutside={false}
-                        showDots={false}
-                        sliderClass=""
-                        slidesToSlide={1}
-                        swipeable
-                    >
+                    <br />
+                    <div className='carousel-layout'>
+                        <Link className="Link newEmployee" to="/newEmployee">
+                            <Button id='button-employee' size='large' className="carouselList" variant="outlined" component="label" color="secondary">
 
-                        <div className="carouselList">
-                            <Link className="Link" to="/newEmployee">
                                 <div className='listContent'> + New Employee</div>
-                            </Link>
-                        </div>
+                            </Button>
+                        </Link>
                         {this.employeeList()}
-                        
-                    </Carousel>
+                    </div>
+
                 </div>
                 <br /><br /><br />
                 <div className="carousel">
