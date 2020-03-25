@@ -94,8 +94,9 @@ code {
 }
 
 .carousel {
-  padding-bottom: '30px';
-  position: 'relative';
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .react-multi-carousel-list{
@@ -106,21 +107,21 @@ code {
   height: 15vw;
 }
 
-.carouselList {
+/* .carouselList {
   margin: 0 15px;
   overflow: hidden;
   height: 100%;
   border-radius: 15px;
   background-color: white;
-}
-.carouselList:hover {
+} */
+/* .carouselList:hover {
   margin: 0 15px;
   overflow: hidden;
   height: 100%;
   border-radius: 15px;
   border: 1px solid rgba(100,100, 100, 0.35);
   background-color: rgba(100,100, 100, 0.05);
-}
+} */
 .listContent {
   display: flex;
   width: 100%;
@@ -165,7 +166,7 @@ code {
   grid-row: 1;
 }
 .payslips{
-   margin-left: 10vw;
+  margin-left: 10vw;
   margin-right: 10vw;
 }
 .paycheck * {
@@ -191,3 +192,22 @@ code {
   color: #ef9a9a;
   239, 154, 154
 } */
+.carousel-layout{
+  display: grid;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  grid-column-gap: 5vw;
+  grid-row-gap: 2vw;
+}
+.carousel-layout label {
+  width: 100%;
+  padding: 1em;
+}
+.newEmployee{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
