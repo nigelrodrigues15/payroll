@@ -12,34 +12,30 @@
             "ytdDeductions": "22.00",
             "payslips": [
                 {
+                    "payendDate": "1/10/2010",
                     "regHrs": "5.00",
-                    "otHrs": "0.00",
-                    "holidayPay": "0.00",
-                    "incentive": "0.00",
-                    "vacationPay": "5.00",
+                    "wage": "15.00",
+                    "otHrs": "1.00",
+                    "holidayHrs": "2.00",
+                    "incentive": "3.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
-                    "EI": "15.00",
+                    "EI": "5.00",
                     "CPP": "15.00",
-                    "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "Tax": "1.00",
+                    "employeeHealth": "105.00"
                 },
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 }
             ]
         },
@@ -48,41 +44,35 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEarnings": "15.00",
             "totalEI": "15.00",
             "totalCPP": "15.00",
             "totalTax": "15.00",
-            "totalDeductions": "15.00",
             "payslips": [
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 },
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 }
             ]
         },
@@ -91,41 +81,35 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEarnings": "15.00",
             "totalEI": "15.00",
             "totalCPP": "15.00",
             "totalTax": "15.00",
-            "totalDeductions": "15.00",
             "payslips": [
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 },
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 }
             ]
         },
@@ -134,41 +118,35 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEarnings": "15.00",
             "totalEI": "15.00",
             "totalCPP": "15.00",
             "totalTax": "15.00",
-            "totalDeductions": "15.00",
             "payslips": [
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 },
                 {
+                    "payendDate": "10/10/2010",
                     "regHrs": "5.00",
+                    "wage": "15.00",
                     "otHrs": "0.00",
-                    "holidayPay": "0.00",
+                    "holidayHrs": "0.00",
                     "incentive": "0.00",
-                    "vacationPay": "5.00",
                     "employerHealth": "13.00",
-                    "totalEarnings": "15.00",
                     "EI": "15.00",
                     "CPP": "15.00",
                     "Tax": "15.00",
-                    "employeeHealth": "15.00",
-                    "totalDeductions": "15.00",
-                    "paycheck": "15.00"
+                    "employeeHealth": "15.00"
                 }
             ]
         }
