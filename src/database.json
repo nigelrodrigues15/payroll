@@ -1,7 +1,7 @@
 {
     "employees": [
         {
-            "name": "Person 1",
+            "name": "First Employee",
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
@@ -37,7 +37,7 @@
             ]
         },
         {
-            "name": "Person 2",
+            "name": "Second Employee",
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
@@ -73,7 +73,7 @@
             ]
         },
         {
-            "name": "Person 3",
+            "name": "Third Employee",
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
@@ -109,7 +109,7 @@
             ]
         },
         {
-            "name": "Person 4",
+            "name": "Fourth Employee",
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
