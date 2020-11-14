@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import employee_container from "./employee_container";
 import TextField from '@material-ui/core/TextField';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,6 +8,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import PayslipForm from "./payslipForm"
+import Button from '@material-ui/core/Button';
 
 class Employee extends React.Component {
     constructor(props) {
@@ -17,12 +18,9 @@ class Employee extends React.Component {
             "name": "Name",
             "DOB": "Date of Birth",
             "startDate": "Start Date",
-            "defaultWage": "Default Wage",
-            "ytdEarnings": "YTD Earnings",
-            "ytdEI": "YTD EI",
-            "ytdCPP": "YTD CPP",
-            "ytdTax": "YTD Tax",
-            "ytdDeductions": "YTD Deductions"
+            "defaultWage": "Wage",
+            "defaultEEhealth": "Employee Health Contr.",
+            "defaultERhealth": "Employer Health Contr."
         }
     }
 
@@ -166,6 +164,15 @@ class Employee extends React.Component {
                         </TableBody>
                     </Table>
                 </TableContainer>
+                <br/>
+                <div className="payslipActions">
+                    <Button id='button-task' variant="outlined" component="label" color="secondary">
+                        CRA Check
+                    </Button>
+                    <Button id='button-task' variant="outlined" component="label" color="secondary">
+                        Print
+                    </Button>
+                </div>
                 <br/><br/>
             </div>
         );
@@ -207,11 +214,12 @@ class Employee extends React.Component {
                 </div>
                 <h2 style={{ letterSpacing: 5 + 'px' }}>PAYSLIPS</h2>
                 <div className="payslips">
+                    <PayslipForm employee={this.props.employee}/>
                     {this.payslipsList()}
                     <br /><br /><br />
                     <br /><br /><br />
                     <br /><br /><br />
-                    </div>
+                </div>
             </div>
         );
     }
