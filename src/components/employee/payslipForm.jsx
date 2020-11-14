@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import {KeyboardDatePicker} from '@material-ui/pickers';
 
 class PayslipForm extends React.Component {
     constructor(props) {
@@ -54,6 +55,24 @@ class PayslipForm extends React.Component {
             />
         );
     }
+    dateselect(label, value = new Date()) {
+
+        return (
+            <KeyboardDatePicker
+                disableToolbar
+                variant="inline"
+                format="dd/MM/yyyy"
+                margin="normal"
+                id="date-picker-inline"
+                label={label}
+                value={value}
+                onChange={"handleDateChange"}
+                KeyboardButtonProps={{
+                    'aria-label': 'change date',
+                }}
+            />
+        );
+    }
 
     render() {
         debugger
@@ -70,10 +89,10 @@ class PayslipForm extends React.Component {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell ><h4 style={{ letterSpacing: 5 }}>Pay End Date</h4></TableCell>
-                                    <TableCell align="center" colSpan={2}><h4 style={{ letterSpacing: 5 }}>{this.textarea("date")}</h4></TableCell>
+                                    <TableCell align="center" colSpan={2}><h4 style={{ letterSpacing: 5 }}>{this.dateselect("Pay End Date")}</h4></TableCell>
                                     <TableCell align="center" colSpan={2}></TableCell>
                                     <TableCell ><h4 style={{ letterSpacing: 5 }}>Payment Date</h4></TableCell>
-                                    <TableCell align="center" colSpan={2}><h4 style={{ letterSpacing: 5 }}>{this.textarea("date")}</h4></TableCell>
+                                    <TableCell align="center" colSpan={2}><h4 style={{ letterSpacing: 5 }}>{this.dateselect("Payment Date")}</h4></TableCell>
                                 </TableRow>
                                 <TableRow>
                                     <TableCell><h3>Earnings</h3></TableCell>
