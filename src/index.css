@@ -98,6 +98,9 @@ code {
   position: 'relative';
 }
 
+.react-multi-carousel-list{
+  overflow: visible !important;
+}
 .react-multi-carousel-item {
   width: 15vw;
   height: 15vw;
@@ -107,8 +110,16 @@ code {
   margin: 0 15px;
   overflow: hidden;
   height: 100%;
-  background-color: white;
   border-radius: 15px;
+  background-color: white;
+}
+.carouselList:hover {
+  margin: 0 15px;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(100,100, 100, 0.35);
+  background-color: rgba(100,100, 100, 0.15);
 }
 .listContent {
   display: flex;
@@ -120,10 +131,6 @@ code {
   font-weight: 200;
   font-size: 1.5em;
   text-transform: uppercase;
-}
-.listContent:hover {
-  background-color: rgba(100,100, 100, 0.15);
-  /* border: crimson 2px; */
 }
 #paypperiodMonth{
   margin: 5px;
@@ -168,3 +175,18 @@ code {
   /* font-weight: 400; */
   letter-spacing: 1px;
 }
+#button-create{
+  height: 70%;
+}
+.payslipformActions{
+  text-align: right;
+}
+.payslipActions{
+  text-align: right;
+}
+#button-task{
+  margin-left: 25px;
+}
+/* .employee h1{
+  color: #ef9a9a;
+} */
