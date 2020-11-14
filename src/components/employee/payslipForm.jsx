@@ -8,7 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import EmployeeForm from "../employeeForm/employeeForm_container"
+import Button from '@material-ui/core/Button';
 
 class PayslipForm extends React.Component {
     constructor(props) {
@@ -167,7 +167,11 @@ class PayslipForm extends React.Component {
                         </Table>
                     </TableContainer>
                     <br/>
-                    
+                    <div className="payslipformActions">
+                        <Button id='button-create' variant="outlined" component="label" color="secondary">
+                            Create
+                        </Button>
+                    </div>
                     <br /><br />
                 </div>
 
