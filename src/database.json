@@ -5,11 +5,8 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "ytdEarnings": "1005.00",
-            "ytdEI": "150.00",
-            "ytdCPP": "50.00",
-            "ytdTax": "10.00",
-            "ytdDeductions": "22.00",
+            "defaultEEhealth": "15.00",
+            "defaultERhealth": "15.00",
             "payslips": [
                 {
                     "payendDate": "1/10/2010",
@@ -44,9 +41,8 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEI": "15.00",
-            "totalCPP": "15.00",
-            "totalTax": "15.00",
+            "defaultEEhealth": "15.00",
+            "defaultERhealth": "15.00",
             "payslips": [
                 {
                     "payendDate": "10/10/2010",
@@ -81,9 +77,8 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEI": "15.00",
-            "totalCPP": "15.00",
-            "totalTax": "15.00",
+            "defaultEEhealth": "15.00",
+            "defaultERhealth": "15.00",
             "payslips": [
                 {
                     "payendDate": "10/10/2010",
@@ -118,9 +113,8 @@
             "DOB": "15/10/1995",
             "startDate": "5/10/2005",
             "defaultWage": "15.00",
-            "totalEI": "15.00",
-            "totalCPP": "15.00",
-            "totalTax": "15.00",
+            "defaultEEhealth": "15.00",
+            "defaultERhealth": "15.00",
             "payslips": [
                 {
                     "payendDate": "10/10/2010",
