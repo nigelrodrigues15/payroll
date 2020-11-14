@@ -107,7 +107,7 @@ class Dashboard extends React.Component {
                     >
 
                         <div className="carouselList">
-                            <Link className="Link" to="/employee">
+                            <Link className="Link" to="/newEmployee">
                                 <div className='listContent'> + New Employee</div>
                             </Link>
                         </div>
