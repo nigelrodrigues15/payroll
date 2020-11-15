@@ -11,7 +11,6 @@ import Select from '@material-ui/core/Select';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        debugger
     }
 
     componentWillMount() {
@@ -22,8 +21,8 @@ class Dashboard extends React.Component {
         let result = employees.map((employee,i) => {
             return (
                 <div key={i} className="carouselList">
-                        <Link className="Link" to={`/employee/${employee}`}>
-                                 <div className='listContent'>{employee}</div>
+                        <Link className="Link" to={`/employee/${i}`}>
+                                 <div className='listContent'>{employee.name}</div>
                         </Link>
                 </div>
             )
