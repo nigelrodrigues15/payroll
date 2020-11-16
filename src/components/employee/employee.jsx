@@ -1,39 +1,66 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import employee_container from "./employee_container";
+import TextField from '@material-ui/core/TextField';
 
 class Employee extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            name: 'hello'
+        this.parameters = {
+            "name": "Name",
+            "DOB": "Date of Birth",
+            "startDate": "Start Date",
+            "defaultWage": "Default Wage",
+            "ytdEarnings": "YTD Earnings",
+            "ytdEI": "YTD EI",
+            "ytdCPP": "YTD CPP",
+            "ytdTax": "YTD Tax",
+            "ytdDeductions": "YTD Deductions"
         }
     }
 
-    componentWillMount() {
-        this.state.name = this.props.match.params.employeeName
+    employeeList(employee = this.props.employee) {
+        delete employee.payslips
+        let data = Object.keys(employee);
+        let i = 0;
+
+        let result = data.map((key, i) => {
+            return (
+                <div key={i} className={"info-" + key}>
+                    <TextField
+                        id="outlined-multiline-flexible"
+                        label={this.parameters[key]}
+                        multiline
+                        rowsMax="4"
+                        value={employee[key]}
+                        onChange='{handleChange}'
+                        variant="outlined"
+                    />
+                </div>
+            )
+        });
+        return result;
     }
 
-    render () {
+    render() {
+
         return (
             <div className="employee">
                 <div className='employee-image'></div>
                 <br /><br /><br />
-                    <h1 style={{ letterSpacing: 15 + 'px' }} >EMPOLYEE</h1>
+                <h1 style={{ letterSpacing: 15 + 'px' }} >{this.props.employee.name.toUpperCase()}</h1>
                 <br /><br /><br />
-    
-                    <div className='employee-info'>
-                        <h1>Form Style Employee Info</h1>
-                        <p>Employee Name</p>
-                        <p>Employee Sex</p>
-                        <p>Employee DOB</p>
-                        <p>Employee Province</p>
-                        <p>Employee Hourly Wage</p>
-                        <p>Employee Start Date</p>
-                        <p>Employee End Date</p>
-                        <p>Employee End Date</p>
-                        <p>{this.state.name}</p>
-    
-    
+                <div className='employee-info'>
+                    <h2 style={{ letterSpacing: 5 + 'px' }}>INFO</h2>
+                    <br/>
+                    <div className="basic-info">
+                        {this.employeeList()}
+                    </div>
+                </div>
+                    <h2 style={{ letterSpacing: 5 + 'px' }}>PAYSLIPS</h2>
+                    <div className="payslips">
+                        <br/>
+                        stuff
                     </div>
             </div>
         );
