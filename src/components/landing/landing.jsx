@@ -14,7 +14,6 @@ class Landing extends React.Component {
 
         this.fileReader.onload = (event) => {
 
-            debugger
             this.props.setDatabase(JSON.parse(event.target.result));
             this.props.history.push(`/dashboard`);  
         };
@@ -26,13 +25,8 @@ class Landing extends React.Component {
         return (
             <div className="landing">
             <div className='landing-image'></div>
-            <div>
-                
-            </div>
-            <br/><br/><br/><br/>
             <div className="oldData">
-                {/* <Link className="Link" to="/dashboard"> */}
-                    <Button id='UIbutton' variant="outlined" component="label" color="default" startIcon={<CloudUploadIcon />}>
+                    <Button id='UIbutton' variant="outlined" component="label" color="default">
                         <Files
                             className="files-dropzone"
                             onChange={file => {
@@ -46,11 +40,13 @@ class Landing extends React.Component {
                             minFileSize={0}
                             clickable
                         >
-                            <p>Upload Database</p> 
+                            
+                            <h1><CloudUploadIcon style={{ fontSize: 45, marginRight: 45 }} /> Upload Database</h1> 
                         </Files>
                     </Button>
-                {/* </Link> */}
             </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/>
         </div>
         );
     }
