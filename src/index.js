@@ -7,13 +7,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+export const preloadedState = require('./database.json')
 // export const preloadedState = {}
-export const preloadedState = {
-    employees: ['Person 1', 'Person 2', 'Person 3', 'Person 4'],
-    months: ['January', 'Feburary', 'March', 'April']
-}
-
-console.log(preloadedState);
 
 ReactDOM.render(
     <Provider store={configureStore(preloadedState)}>
